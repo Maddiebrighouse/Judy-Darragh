@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900);
 
+/* TODO Make page full screen size */
 html,
 body {
     -moz-osx-font-smoothing: antialiased;
@@ -10,6 +11,7 @@ body {
     height: 100%;
 }
 /* Blinking Background for landing page */
+/* TODO Make more seamless */
   @-webkit-keyframes blink {
     from { background-color: #74ee15; }
     to { background-color: #ffe700; }
@@ -84,12 +86,13 @@ body {
     justify-content: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-color: #74ee15;
-    -webkit-animation: blink 2s 3 alternate;
-    -moz-animation: blink 2s 3 alternate;  
-    -ms-animation: blink 2s 3 alternate;  
-    -o-animation: blink 2s 3 alternate;  
-    animation: blink 2s 3 alternate; 
+
+    /* Animation for font change */
+    -webkit-animation: header 2s 3 alternate;
+    -moz-animation: header 2s 3 alternate;  
+    -ms-animation: header 2s 3 alternate;  
+    -o-animation: header 2s 3 alternate;  
+    animation: header 2s 3 alternate; 
 }
 
 h3 {
@@ -125,12 +128,12 @@ a {
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
-.arrow-one{
+/* .arrow-one{
     width: 50px;
     bottom:0px;
     right: 48%;
     position: absolute;
-}
+} */
 
 .second-page {
     background-color: #ff009a;
@@ -184,3 +187,73 @@ hr{
     margin-right: 2px;
 }
 
+/* TODO Create Arrow in CSS */
+/* Scroll */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-down {
+  opacity: 1;
+  /* -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s; */
+}
+
+@-webkit-keyframes scroll-down {
+    from { border: 2px solid #ffe700; }
+    to { border: 2px solid #74ee15; }
+   }
+  @-moz-keyframes scroll-down {
+    from { border: 2px solid #ffe700; }
+    to { border: 2px solid #74ee15; }
+  }
+  @-ms-keyframes scroll-down {
+    from { border: 2px solid #ffe700; }
+    to { border: 2px solid #74ee15; }
+  }
+  @-o-keyframes scroll-down {
+    from { border: 2px solid #ffe700; }
+    to { border: 2px solid #74ee15; }
+  }
+  @keyframes scroll-down {
+    from { border: 2px solid #ffe700; }
+    to { border: 2px solid #74ee15; }
+  }
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: 14px auto;
+  z-index: 2;
+  transform: scale(4);
+  border: 2px solid #ffe700;
+
+    /* Animation for font change */
+    -webkit-animation: scroll-down 2s 3 alternate;
+    -moz-animation: scroll-down 2s 3 alternate;  
+    -ms-animation: scroll-down 2s 3 alternate;  
+    -o-animation: scroll-down 2s 3 alternate;  
+    animation: scroll-down 2s 3 alternate;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid #ffe700;
+    border-width: 0px 0 2px 2px;
+}
