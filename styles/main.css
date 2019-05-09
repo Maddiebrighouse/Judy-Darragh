@@ -1,24 +1,79 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900);
 
+/* TODO Hover over links change colour */
+
 html,
 body {
     -moz-osx-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
-    height: 100%;
+    background-color: #ff009a;
 }
+/* Landing page */
+/* Blinking Background for landing page */
+  @-webkit-keyframes blink {
+    from { background-color: #74ee15; }
+    to { background-color: #ffe700; }
+   }
+  @-moz-keyframes blink {
+    from { background-color: #74ee15; }
+    to { background-color: #ffe700; }
+  }
+  @-ms-keyframes blink {
+    from { background-color: #74ee15; }
+    to { background-color: #ffe700; }
+  }
+  @-o-keyframes blink {
+    from { background-color: #74ee15; }
+    to { background-color: #ffe700; }
+  }
+  @keyframes blink {
+    from { background-color: #74ee15; }
+    to { background-color: #ffe700; }
 
-h1 {
+  }
+ 
+  .blink {
+     background-color: #74ee15;
+     -webkit-animation: blink 0.3s 2 alternate;  /* Chrome and other webkit browsers */
+     animation: blink 0.3s 2 alternate;          /* W3C compliant browsers */
+     animation-iteration-count: infinite;  
+  }
+
+
+
+  /* Font colour changing for Landing page */
+  @-webkit-keyframes header {
+    from { color: #ffe700; }
+    to { color: #74ee15; }
+   }
+  @-moz-keyframes header {
+    from { color: #ffe700; }
+    to { color: #74ee15; }
+  }
+  @-ms-keyframes header {
+    from { color: #ffe700; }
+    to { color: #74ee15; }
+  }
+  @-o-keyframes header {
+    from { color: #ffe700; }
+    to { color: #74ee15; }
+  }
+  @keyframes header {
+    from { color: #ffe700; }
+    to { color: #74ee15; }
+  }
+ 
+.header {
     color: #ffe700;
     font-family: 'Roboto', sans-serif;
-    font-size: 2em;
+    font-size: 7em;
     font-weight: 400;
     letter-spacing: .15em;
     position: relative;
-    top: 50%;
-
+    top: 41%;
     -ms-box-orient: horizontal;
     display: -webkit-box;
     display: -moz-box;
@@ -30,25 +85,235 @@ h1 {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-
-
     margin-top: 0px;
     margin-bottom: 0px;
 
-
+    /* Animation for font change */
+    -webkit-animation: header 0.3s 2 alternate;  /* Chrome and other webkit browsers */
+    animation: header 0.3s 2 alternate;          /* W3C compliant browsers */
+    animation-iteration-count: infinite; 
 }
 
 h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: .15em;
     margin-top: 0px;
     margin-bottom: 0px;
+} 
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: .15em;
+    color: #ffe700;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: #74ee15;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: .15em;
+    text-decoration: none;
+}
+
+/* underline when hover */
+a:hover { 
+    text-decoration-line: underline; 
 }
 
 .landing-page {
     background-color: #74ee15;
-    height: 800px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
-.info {
+/* Second page */
+.second-page {
     background-color: #ff009a;
-    color: #74ee15;
+    height: 100vh;
+    color: #ffe700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arrow-two{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+    transform: rotate(180deg);             /* W3C compliant browsers */
+} 
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10%;
+
+}
+
+.contact {
+    width: 500px;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid #ffe700;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+.bio {
+    width: 500px;
+}
+
+/* Socail media icons */
+.social {
+    display: flex;
+    justify-content: center;
+    bottom: 0%;
+}
+
+.social > a > img {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+ .social > a {
+    width: 50px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+ }
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for arrow to change colour */
+@-webkit-keyframes scroll {
+    from { border-color: #ffe700; }
+    to { border-color: #74ee15; }
+   }
+  @-moz-keyframes scroll {
+    from { border-color: #ffe700; }
+    to { border-color: #74ee15; }
+  }
+  @-ms-keyframes scroll {
+    from { border-color: #ffe700; }
+    to { border-color: #74ee15; }
+  }
+  @-o-keyframes scroll {
+    from { border-color: #ffe700; }
+    to { border-color: #74ee15; }
+  }
+  @keyframes scroll {
+    from { border-color: #ffe700; }
+    to { border-color: #74ee15; }
+  }
+
+.scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+  transform: scale(4);
+  opacity: 1;
+}
+
+.scroll:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 0px solid;
+    border-width: 0px 0 1px 1px;
+    border-color: #ffe700;
+
+    /* Animation for font change */
+    -webkit-animation: scroll 0.3s 2 alternate; /* Chrome and other webkit browsers */
+    animation: scroll 0.3s 2 alternate;           /* W3C compliant browsers */
+    animation-iteration-count: infinite;
+
+    
+}
+
+/* Stops second arrow changing colour */
+.no-flash {
+    animation: none !important;
+}
+.no-flash:before {
+    animation: none !important;
+}
+
+    /* Responsive for mobile */
+@media only screen and (max-width: 60vh){
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80%;
+        align-items: center;
+    }
+
+    .contact {
+        text-align: center;
+        margin-bottom: 10%; 
+    }
+
+    hr {
+        border: 2px solid #ffe700;
+        width: 70%;
+        margin: 10px;
+    }
+
+    .bio {
+        text-align: center;
+        margin-top: 10%; 
+        width: 80%;
+    }
+    
+    h3 {
+        font-size: 4em;
+        letter-spacing: .15em;
+    }
+
+    .contact > a, p {
+        font-size: 2em;
+        letter-spacing: .15em;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 1.8em;
+        letter-spacing: .15em;
+    }
+    .social > a {
+        width: 50px;
+        margin-bottom: 10px;
+        margin-left: 2px;
+        margin-right: 2px;
+     }
 }
