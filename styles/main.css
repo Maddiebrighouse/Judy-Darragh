@@ -179,7 +179,6 @@ hr {
 .social {
     display: flex;
     justify-content: center;
-    bottom: 0%;
 }
 
 .social > a > img {
@@ -316,4 +315,10 @@ hr {
         margin-left: 2px;
         margin-right: 2px;
      }
+}
+
+@media only screen and (max-height: 700px){
+    .social {
+        margin-top: -10%;
+    }
 }
