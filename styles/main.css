@@ -322,8 +322,7 @@ hr {
 
     .contact {
         text-align: center;
-        margin-top: 5%;
-        margin-bottom: 5%; 
+        margin-bottom: 1%;
     }
 
     hr {
@@ -334,11 +333,12 @@ hr {
 
     .bio {
         text-align: center;
-        margin-top: 5%;
+        margin-top: 1%;
         width: 80%;
     }
     
     h3 {
+        margin-top: 10%;
         font-size: 4em;
         letter-spacing: .15em;
     }
