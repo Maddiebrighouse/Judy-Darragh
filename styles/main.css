@@ -39,6 +39,7 @@ body {
      background-color: #74ee15;
      -webkit-animation: blink 0.3s 2 alternate;  /* Chrome and other webkit browsers */
      animation: blink 0.3s 2 alternate;          /* W3C compliant browsers */
+     -webkit-animation-iteration-count: infinite;
      animation-iteration-count: infinite;  
   }
 
@@ -76,14 +77,16 @@ body {
     top: 41%;
     -ms-box-orient: horizontal;
     display: -webkit-box;
-    display: -moz-box;
     display: -ms-flexbox;
     display: -moz-flex;
-    display: -webkit-flex;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -91,6 +94,7 @@ body {
     /* Animation for font change */
     -webkit-animation: header 0.3s 2 alternate;  /* Chrome and other webkit browsers */
     animation: header 0.3s 2 alternate;          /* W3C compliant browsers */
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; 
 }
 
@@ -124,7 +128,8 @@ a {
 
 /* underline when hover */
 a:hover { 
-    text-decoration-line: underline; 
+  -webkit-text-decoration-line: underline; 
+  text-decoration-line: underline;  
 }
 
 .landing-page {
@@ -139,25 +144,41 @@ a:hover {
     background-color: #ff009a;
     height: 100vh;
     color: #ffe700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .arrow-two{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     margin-top: 10px;
     -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
     transform: rotate(180deg);             /* W3C compliant browsers */
+    -ms-transform: rotate(180deg);
 } 
 
 .info {
+  display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 10%;
-
 }
 
 .contact {
@@ -177,8 +198,12 @@ hr {
 
 /* Socail media icons */
 .social {
-    display: flex;
-    justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .social > a > img {
@@ -197,6 +222,7 @@ hr {
 *,
 :after,
 :before {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -233,6 +259,8 @@ hr {
   width: 32px;
   height: 32px;
   z-index: 2;
+  -webkit-transform: scale(4);
+  -ms-transform: scale(4);
   transform: scale(4);
   opacity: 1;
 }
@@ -241,6 +269,8 @@ hr {
     position: absolute;
     top: calc(50% - 8px);
     left: calc(50% - 6px);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     display: block;
     width: 12px;
@@ -253,6 +283,7 @@ hr {
     /* Animation for font change */
     -webkit-animation: scroll 0.3s 2 alternate; /* Chrome and other webkit browsers */
     animation: scroll 0.3s 2 alternate;           /* W3C compliant browsers */
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 
     
@@ -260,21 +291,32 @@ hr {
 
 /* Stops second arrow changing colour */
 .no-flash {
-    animation: none !important;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 .no-flash:before {
-    animation: none !important;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 
     /* Responsive for mobile */
 @media only screen and (max-width: 60vh){
     
     .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 80%;
-        align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 80%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
     }
 
     .contact {
