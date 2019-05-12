@@ -252,9 +252,10 @@ hr {
 
 .scroll {
   position: absolute;
-  bottom: 40px;
+  bottom: 2%;
   left: 50%;
   margin-left: -16px;
+  margin-bottom: 5%;
   display: block;
   width: 32px;
   height: 32px;
